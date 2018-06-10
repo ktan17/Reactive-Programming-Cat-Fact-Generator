@@ -1,24 +1,160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RI6-Xu-Y1H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--CS ReactiveSwift-->
+        <scene sceneID="Rnc-nx-omK">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="Ch9-ob-C7I" customClass="CSReactiveSwiftViewController" customModule="ReactiveTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uDK-K5-R5x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3N-jZ-NTA">
+                                <rect key="frame" x="87" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="49A-Ob-UBt"/>
+                                    <constraint firstAttribute="width" constant="200" id="9w0-Hu-cv2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="180"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mlem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCQ-Gt-6NV">
+                                <rect key="frame" x="40" y="355" width="295" height="24"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7l9-lM-2D9">
+                                <rect key="frame" x="130.5" y="498" width="114" height="30"/>
+                                <state key="normal" title="✨ Generate ✨"/>
+                                <connections>
+                                    <action selector="generateTapped:" destination="LAu-nd-TbT" eventType="touchUpInside" id="PWl-sH-XHT"/>
+                                    <action selector="generateTapped:" destination="Ch9-ob-C7I" eventType="touchUpInside" id="ptc-7r-3Md"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qNk-gr-Lb4" firstAttribute="trailing" secondItem="cCQ-Gt-6NV" secondAttribute="trailing" constant="40" id="6zq-6g-bU7"/>
+                            <constraint firstItem="cCQ-Gt-6NV" firstAttribute="top" secondItem="Y3N-jZ-NTA" secondAttribute="bottom" constant="35" id="7cK-hb-gLu"/>
+                            <constraint firstItem="Y3N-jZ-NTA" firstAttribute="top" secondItem="qNk-gr-Lb4" secondAttribute="top" constant="100" id="BEl-d5-nK2"/>
+                            <constraint firstItem="cCQ-Gt-6NV" firstAttribute="leading" secondItem="qNk-gr-Lb4" secondAttribute="leading" constant="40" id="LlB-eB-Pxx"/>
+                            <constraint firstItem="qNk-gr-Lb4" firstAttribute="bottom" secondItem="7l9-lM-2D9" secondAttribute="bottom" constant="90" id="RqP-jh-aAG"/>
+                            <constraint firstItem="Y3N-jZ-NTA" firstAttribute="centerX" secondItem="uDK-K5-R5x" secondAttribute="centerX" id="VxV-g6-Vmf"/>
+                            <constraint firstItem="7l9-lM-2D9" firstAttribute="centerX" secondItem="uDK-K5-R5x" secondAttribute="centerX" id="lR3-yD-yC5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qNk-gr-Lb4"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="CS ReactiveSwift" image="Swift_icon" id="zQR-TJ-XFi"/>
+                    <connections>
+                        <outlet property="factLabel" destination="cCQ-Gt-6NV" id="3Tc-4V-T4W"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fhc-ie-w9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="820" y="1236"/>
+        </scene>
+        <!--MVVM ReactiveSwift-->
+        <scene sceneID="m1R-zk-HxO">
+            <objects>
+                <viewController id="LAu-nd-TbT" customClass="MVVMReactiveSwiftViewController" customModule="ReactiveTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gQm-kz-VbC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🐱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYN-lo-oE6">
+                                <rect key="frame" x="87.5" y="120" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="aRA-Eg-dZs"/>
+                                    <constraint firstAttribute="width" constant="200" id="uqx-gP-EMy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="180"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mlem" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pk-ly-4Wh">
+                                <rect key="frame" x="40" y="355" width="295" height="24"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azg-dw-dxM">
+                                <rect key="frame" x="130" y="498" width="114" height="30"/>
+                                <state key="normal" title="✨ Generate ✨"/>
+                                <connections>
+                                    <action selector="generateTapped:" destination="LAu-nd-TbT" eventType="touchUpInside" id="dD7-tm-hel"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Azg-dw-dxM" firstAttribute="centerX" secondItem="gQm-kz-VbC" secondAttribute="centerX" id="1b2-u3-NlN"/>
+                            <constraint firstItem="XYN-lo-oE6" firstAttribute="centerX" secondItem="gQm-kz-VbC" secondAttribute="centerX" id="2fQ-O5-vsp"/>
+                            <constraint firstItem="tEX-dM-iMY" firstAttribute="bottom" secondItem="Azg-dw-dxM" secondAttribute="bottom" constant="90" id="8Vt-6x-s34"/>
+                            <constraint firstItem="XYN-lo-oE6" firstAttribute="top" secondItem="tEX-dM-iMY" secondAttribute="top" constant="100" id="It4-A4-nWX"/>
+                            <constraint firstItem="4pk-ly-4Wh" firstAttribute="top" secondItem="XYN-lo-oE6" secondAttribute="bottom" constant="35" id="PeS-LV-ssY"/>
+                            <constraint firstItem="tEX-dM-iMY" firstAttribute="trailing" secondItem="4pk-ly-4Wh" secondAttribute="trailing" constant="40" id="Yb9-lf-pb4"/>
+                            <constraint firstItem="4pk-ly-4Wh" firstAttribute="leading" secondItem="tEX-dM-iMY" secondAttribute="leading" constant="40" id="lxn-5g-jGo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tEX-dM-iMY"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MVVM ReactiveSwift" image="Swift_icon" id="LJS-aI-c1w"/>
+                    <connections>
+                        <outlet property="factLabel" destination="4pk-ly-4Wh" id="aw4-yE-2Sv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="svE-Hb-CPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="1236"/>
+        </scene>
+        <!--RxSwift-->
+        <scene sceneID="g7j-qU-a2H">
+            <objects>
+                <viewController id="hS9-75-cKu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4BN-fv-Tmt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oaZ-O2-odg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="RxSwift" image="RxSwift_icon" id="r1T-3w-DOh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldb-rY-JJU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-865" y="1237"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="nOe-h0-xnj">
+            <objects>
+                <tabBarController id="RI6-Xu-Y1H" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z9e-N8-ly1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="hS9-75-cKu" kind="relationship" relationship="viewControllers" id="pTe-Sx-RoI"/>
+                        <segue destination="LAu-nd-TbT" kind="relationship" relationship="viewControllers" id="jKJ-TR-Fsh"/>
+                        <segue destination="Ch9-ob-C7I" kind="relationship" relationship="viewControllers" id="upF-Fx-e4T"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6O-dz-Rnl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202" y="397"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RxSwift_icon" width="25" height="25"/>
+        <image name="Swift_icon" width="25" height="23"/>
+    </resources>
 </document>
